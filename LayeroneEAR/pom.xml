@@ -45,6 +45,7 @@
                     <jvmArgs>-Djboss.socket.binding.port-offset=100</jvmArgs>
                     <filename>${project.build.finalName}.ear</filename>
                     <addUser>admin:123:admin:ManagementRealm:false</addUser>
+                    <jvmArgs>-agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n</jvmArgs>
                 </configuration>
             </plugin>
         </plugins>
