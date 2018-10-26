@@ -8,4 +8,5 @@
 
     <context:annotation-config />
     <context:component-scan base-package="pl.tomekkup" />
+    
 </beans>
