@@ -1,3 +1,9 @@
-/LayeroneEJB/target/
-/LayeroneWEB/target/
-/LayeroneEAR/target/
+~
+target/
+
+.classpath
+.project
+.settings/
+lib/
+
+.idea/
