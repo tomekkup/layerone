@@ -7,6 +7,12 @@
     <packaging>pom</packaging>
     <name>LayerOne</name>
   
+    <modules>
+        <module>LayeroneEAR</module>
+        <module>LayeroneWEB</module>
+        <module>LayeroneEJB</module>
+    </modules>
+    
     <description>Sample J2EE app</description>
     <inceptionYear>2018</inceptionYear>
     <developers>
@@ -16,17 +22,35 @@
         </developer>
     </developers>
   
-    <modules>
-        <module>LayeroneEAR</module>
-        <module>LayeroneWEB</module>
-        <module>LayeroneEJB</module>
-    </modules>
-  
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.spring>5.0.7.RELEASE</version.spring>
     </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+    </dependencies>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${version.spring}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     
     <build>
         <pluginManagement>
@@ -89,4 +113,12 @@
             </plugin>
         </plugins>
     </build>
+    
+    <repositories>
+        <repository>
+            <id>repository.springframework.maven.release</id>
+            <name>Spring Framework Maven Release Repository</name>
+            <url>http://maven.springframework.org/release</url>
+        </repository>
+    </repositories>
 </project>
