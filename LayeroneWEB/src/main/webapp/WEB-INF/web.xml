@@ -14,10 +14,22 @@
     </context-param>
     	
     <context-param>
-        <param-name>primefaces.THEME</param-name>
-        <param-value>afterdark</param-value>
+        <param-name>BootsFaces_THEME</param-name>
+        <param-value>cerulean</param-value>
     </context-param>
     
+    <context-param>
+        <param-name>net.bootsfaces.blockUI</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>javax.faces.FACELETS_DECORATORS</param-name>
+        <param-value>
+            net.bootsfaces.decorator.BootsFacesTagDecorator
+        </param-value>
+    </context-param>
+
     <context-param>
         <param-name>com.ocpsoft.pretty.DEVELOPMENT</param-name>
         <param-value>true</param-value>
