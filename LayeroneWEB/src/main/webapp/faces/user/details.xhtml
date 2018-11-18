@@ -7,13 +7,11 @@
       xmlns:b="http://bootsfaces.net/ui">
 
     <ui:component>
+        <c:set var="user" value="#{userViewBean.user}"/>
         <h:form>
             <b:messages autoUpdate="true"/>
 
-            <b:dataTable value="#{userViewBean.all}" var="user">
-                <b:dataTableColumn value="#{user.id}" label="ID"/>
-                <b:dataTableColumn value="#{user.name}" label="Nazwa"/>
-            </b:dataTable>
+            <b:inputText label="Nazwa:" value="#{user.name}"/>        
         </h:form>
     </ui:component>
 

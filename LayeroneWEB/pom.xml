@@ -20,16 +20,20 @@
     
     <dependencies>
         <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>LayeroneEJB</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+        <dependency>
             <groupId>net.bootsfaces</groupId>
             <artifactId>bootsfaces</artifactId>
             <version>1.3.0</version>
-        </dependency>
-              
+        </dependency>      
         <!-- libraries version adequate to Wildfly 14 -->
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
-            <version>8.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

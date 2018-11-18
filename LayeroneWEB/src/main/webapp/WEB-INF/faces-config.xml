@@ -5,5 +5,6 @@
 
     <application>
         <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+        <el-resolver>org.springframework.web.jsf.el.WebApplicationContextFacesELResolver</el-resolver>
     </application>
 </faces-config>

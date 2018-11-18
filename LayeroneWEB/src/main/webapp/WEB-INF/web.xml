@@ -7,6 +7,11 @@
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
+    
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/context/applicationContext*.xml</param-value>
+    </context-param>
 
     <context-param>
         <param-name>javax.faces.PROJECT_STAGE</param-name>
@@ -60,6 +65,17 @@
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    
+    <servlet>
+        <servlet-name>H2Console</servlet-name>
+        <servlet-class>org.h2.server.web.WebServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>H2Console</servlet-name>
+        <url-pattern>/h2console/*</url-pattern>
+</servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
