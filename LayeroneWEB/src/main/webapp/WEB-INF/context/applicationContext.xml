@@ -28,6 +28,8 @@
         <prop key="hibernate.hbm2ddl.import_files">import.sql</prop>
         <prop key="hibernate.hbm2ddl.import_files_sql_extractor">org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor</prop>
         <prop key="hibernate.enable_lazy_load_no_trans">true</prop>
+        <prop key="hibernate.show_sql">true</prop>
+        <prop key="hibernate.format_sql">true</prop>
     </util:properties>
     
     <jdbc:embedded-database id="dataSource" type="H2" database-name="layerone" />
